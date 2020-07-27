@@ -47,7 +47,6 @@ release = u''
 extensions = [ 
     'sphinx_tabs.tabs'
 ]
-__import__(sphinx_tabs.tabs, None, None, ['setup'])
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
