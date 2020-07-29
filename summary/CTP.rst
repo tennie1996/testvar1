@@ -57,10 +57,10 @@ For two constriants (J=2), the above procedure finds the following parameter val
 Code
 ~~~~~
 
-.. tabs::
-   .. code-tab:: r C
-    
-        void ctp1 (individual_real *ind) {
+
+.. code-block:: c
+   
+    void ctp1 (individual_real *ind) {
         double m;
         double *xreal, *obj;
         double g,h,f1=0,f2=0;
