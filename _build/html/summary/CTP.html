@@ -13,10 +13,6 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
 
   
   
@@ -34,8 +30,6 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
-        <script type="text/javascript" src="../_static/sphinx_tabs/tabs.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -223,72 +217,62 @@
 </div>
 <div class="section" id="code">
 <h3>1.1.3. Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h3>
-<div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-Qw== docutils container">
-<div class="docutils container">
-C</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qw== active docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span>    <span class="n">void</span> <span class="nf">ctp1 </span><span class="p">(</span><span class="n">individual_real</span> <span class="o">*</span><span class="n">ind</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">double</span> <span class="n">m</span><span class="p">;</span>
-    <span class="n">double</span> <span class="o">*</span><span class="n">xreal</span><span class="p">,</span> <span class="o">*</span><span class="n">obj</span><span class="p">;</span>
-    <span class="n">double</span> <span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">f1</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="n">f2</span><span class="o">=</span><span class="m">0</span><span class="p">;</span>
-    <span class="n">int</span> <span class="n">i</span><span class="p">;</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">ctp1</span> <span class="p">(</span><span class="n">individual_real</span> <span class="o">*</span><span class="n">ind</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">double</span> <span class="n">m</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="o">*</span><span class="n">xreal</span><span class="p">,</span> <span class="o">*</span><span class="n">obj</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">f1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">f2</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
 
     <span class="n">obj</span> <span class="o">=</span> <span class="n">ind</span><span class="o">-&gt;</span><span class="n">obj</span><span class="p">;</span>
     <span class="n">xreal</span> <span class="o">=</span> <span class="n">ind</span><span class="o">-&gt;</span><span class="n">xreal</span><span class="p">;</span>
-    <span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="m">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">number_objective</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">number_objective</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">f1</span> <span class="o">+=</span> <span class="nf">pow</span><span class="p">(</span><span class="n">xreal[i]</span><span class="p">,</span><span class="m">2.0</span><span class="p">);</span>
-        <span class="n">f2</span> <span class="o">+=</span> <span class="n">xreal[i]</span><span class="p">;</span>
+        <span class="n">f1</span> <span class="o">+=</span> <span class="n">pow</span><span class="p">(</span><span class="n">xreal</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="mf">2.0</span><span class="p">);</span>
+        <span class="n">f2</span> <span class="o">+=</span> <span class="n">xreal</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
     <span class="p">}</span>
-    <span class="n">obj[0]</span><span class="o">=</span><span class="n">xreal[0]</span><span class="p">;</span><span class="o">//</span><span class="nf">f1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">g</span><span class="o">=</span><span class="m">11</span><span class="o">+</span><span class="n">f1</span><span class="m">-10</span><span class="o">*</span><span class="nf">cos</span><span class="p">(</span><span class="m">2</span><span class="o">*</span><span class="n">PI</span><span class="o">*</span><span class="n">f2</span><span class="p">);</span>
-    <span class="n">h</span><span class="o">=</span><span class="nf">exp</span><span class="p">(</span><span class="o">-</span><span class="n">obj[0]</span><span class="o">/</span><span class="n">g</span><span class="p">);</span>
-    <span class="n">obj[1]</span> <span class="o">=</span> <span class="n">g</span><span class="o">*</span><span class="n">h</span><span class="p">;</span><span class="o">//</span><span class="nf">f2</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">xreal</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="c1">//f1(x)</span>
+    <span class="n">g</span><span class="o">=</span><span class="mi">11</span><span class="o">+</span><span class="n">f1</span><span class="o">-</span><span class="mi">10</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">PI</span><span class="o">*</span><span class="n">f2</span><span class="p">);</span>
+    <span class="n">h</span><span class="o">=</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">g</span><span class="p">);</span>
+    <span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="o">*</span><span class="n">h</span><span class="p">;</span><span class="c1">//f2(x)</span>
 
-    <span class="o">//</span><span class="n">the</span> <span class="n">constraint</span> <span class="n">numbers</span> <span class="n">is</span> <span class="n">J</span><span class="p">;</span>
-    <span class="n">int</span> <span class="n">j</span><span class="p">,</span><span class="n">J</span><span class="p">;</span>
-    <span class="n">J</span><span class="o">=</span><span class="m">2</span><span class="p">;</span>
-    <span class="n">double</span> <span class="n">a[J</span><span class="m">+1</span><span class="n">]</span><span class="p">,</span><span class="n">b[J</span><span class="m">+1</span><span class="n">]</span><span class="p">,</span><span class="n">C[J</span><span class="m">+1</span><span class="n">]</span><span class="p">;</span>
-    <span class="n">double</span> <span class="n">alfa</span><span class="p">,</span><span class="n">beta</span><span class="p">,</span><span class="n">delta</span><span class="p">;</span>
-    <span class="n">double</span> <span class="n">a1</span><span class="p">,</span> <span class="n">b1</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span> <span class="n">b2</span><span class="p">,</span> <span class="n">C1</span><span class="p">,</span> <span class="n">C2</span><span class="p">;</span>
-    <span class="n">delta</span><span class="o">=</span><span class="m">1.0</span><span class="o">/</span><span class="p">(</span><span class="n">J</span><span class="m">+1.0</span><span class="p">);</span>
+    <span class="c1">//the constraint numbers is J;</span>
+    <span class="kt">int</span> <span class="n">j</span><span class="p">,</span><span class="n">J</span><span class="p">;</span>
+    <span class="n">J</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">a</span><span class="p">[</span><span class="n">J</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span><span class="n">b</span><span class="p">[</span><span class="n">J</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span><span class="n">C</span><span class="p">[</span><span class="n">J</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+    <span class="kt">double</span> <span class="n">alfa</span><span class="p">,</span><span class="n">beta</span><span class="p">,</span><span class="n">delta</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">a1</span><span class="p">,</span> <span class="n">b1</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span> <span class="n">b2</span><span class="p">,</span> <span class="n">C1</span><span class="p">,</span> <span class="n">C2</span><span class="p">;</span>
+    <span class="n">delta</span><span class="o">=</span><span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="n">J</span><span class="o">+</span><span class="mf">1.0</span><span class="p">);</span>
     <span class="n">alfa</span><span class="o">=</span><span class="n">delta</span><span class="p">;</span>
-    <span class="nf">for </span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">J</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">J</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="nf">if</span><span class="p">(</span><span class="n">j</span><span class="o">==</span><span class="m">0</span><span class="p">)</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">j</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
         <span class="p">{</span>
-            <span class="n">a[j]</span><span class="o">=</span><span class="m">1.0</span><span class="p">;</span>
-            <span class="n">b[j]</span><span class="o">=</span><span class="m">1.0</span><span class="p">;</span>
+            <span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mf">1.0</span><span class="p">;</span>
+            <span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mf">1.0</span><span class="p">;</span>
         <span class="p">}</span>
-        <span class="n">beta</span><span class="o">=</span><span class="n">a[j]</span><span class="o">*</span><span class="nf">exp</span><span class="p">(</span><span class="o">-</span><span class="n">b[j]</span><span class="o">*</span><span class="n">alfa</span><span class="p">);</span>
-        <span class="n">a[j</span><span class="m">+1</span><span class="n">]</span><span class="o">=</span><span class="p">(</span><span class="n">a[j]</span><span class="o">+</span><span class="n">beta</span><span class="p">)</span><span class="o">/</span><span class="m">2.0</span><span class="p">;</span>
-        <span class="n">b[j</span><span class="m">+1</span><span class="n">]</span><span class="o">=</span><span class="m">-1.0</span><span class="o">*</span><span class="nf">log</span><span class="p">(</span><span class="n">beta</span><span class="o">/</span><span class="n">a[j</span><span class="m">+1</span><span class="n">]</span><span class="p">)</span><span class="o">/</span><span class="n">alfa</span><span class="p">;</span>
+        <span class="n">beta</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">alfa</span><span class="p">);</span>
+        <span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="n">beta</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+        <span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=-</span><span class="mf">1.0</span><span class="o">*</span><span class="n">log</span><span class="p">(</span><span class="n">beta</span><span class="o">/</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="n">alfa</span><span class="p">;</span>
         <span class="n">alfa</span><span class="o">=</span><span class="n">alfa</span><span class="o">+</span><span class="n">delta</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="o">/*</span><span class="n">a1</span><span class="o">=</span><span class="m">0.858</span><span class="p">;</span>
-      <span class="n">a2</span><span class="o">=</span><span class="m">0.728</span><span class="p">;</span>
-      <span class="n">b1</span><span class="o">=</span><span class="m">0.541</span><span class="p">;</span>
-      <span class="n">b2</span><span class="o">=</span><span class="m">0.295</span><span class="p">;</span>
-    <span class="o">*/</span>
-    <span class="n">ind</span><span class="o">-&gt;</span><span class="n">cv</span><span class="o">=</span><span class="m">0</span><span class="p">;</span>
-    <span class="nf">for </span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">J</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+    <span class="cm">/*a1=0.858;</span>
+<span class="cm">      a2=0.728;</span>
+<span class="cm">      b1=0.541;</span>
+<span class="cm">      b2=0.295;</span>
+<span class="cm">    */</span>
+    <span class="n">ind</span><span class="o">-&gt;</span><span class="n">cv</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">J</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">C[j</span><span class="m">+1</span><span class="n">]</span><span class="o">=</span><span class="n">obj[1]</span><span class="o">-</span><span class="n">a[j</span><span class="m">+1</span><span class="n">]</span><span class="o">*</span><span class="nf">exp</span><span class="p">(</span><span class="o">-</span><span class="n">b[j</span><span class="m">+1</span><span class="n">]</span><span class="o">*</span><span class="n">obj[0]</span><span class="p">);</span>
-        <span class="nf">if</span><span class="p">(</span><span class="n">C[j</span><span class="m">+1</span><span class="n">]</span><span class="o">&gt;</span><span class="m">0</span><span class="o">||</span><span class="n">C[j</span><span class="m">+1</span><span class="n">]</span><span class="o">==</span><span class="m">0</span><span class="p">)</span>
-            <span class="n">m</span><span class="o">=</span><span class="m">0</span><span class="p">;</span>
-        <span class="n">else</span>
-            <span class="n">m</span><span class="o">=</span><span class="n">C[j</span><span class="m">+1</span><span class="n">]</span><span class="p">;</span>
+        <span class="n">C</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">C</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span><span class="o">||</span><span class="n">C</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="k">else</span>
+            <span class="n">m</span><span class="o">=</span><span class="n">C</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
         <span class="n">ind</span><span class="o">-&gt;</span><span class="n">cv</span> <span class="o">+=</span> <span class="n">m</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="objective-space-view">
