@@ -1,0 +1,837 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. CTP &mdash; CMOPs_DOCs  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. CF" href="CF.html" />
+    <link rel="prev" title="Overview" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> CMOPs_DOCs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">summary</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. CTP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ctp1">1.1. CTP1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-form-of-ctp1">1.1.1. the form of CTP1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#procedure-for-calculating-a-j-and-b-j">1.1.2. procedure for calculating <span class="math notranslate nohighlight">\(a_j\)</span> and <span class="math notranslate nohighlight">\(b_j\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code">1.1.3. Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#objective-space-view">1.1.4. objective space view</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ctp2">1.2. CTP2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-form-of-ctp2">1.2.1. the form of CTP2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parameter-settings">1.2.2. parameter settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">1.2.3. Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">1.2.4. objective space view</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ctp3">1.3. CTP3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">1.3.1. parameter settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">1.3.2. Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">1.3.3. objective space view</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ctp4">1.4. CTP4</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">1.4.1. parameter settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">1.4.2. Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">1.4.3. objective space view</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ctp5">1.5. CTP5</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">1.5.1. parameter settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">1.5.2. Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">1.5.3. objective space view</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ctp6">1.6. CTP6</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id12">1.6.1. parameter settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">1.6.2. Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">1.6.3. objective space view</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ctp7">1.7. CTP7</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id15">1.7.1. parameter settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">1.7.2. Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">1.7.3. objective space view</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ctp8">1.8. CTP8</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id18">1.8.1. parameter settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">1.8.2. Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">1.8.3. objective space view</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CF.html">2. CF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C-DTLZ.html">3. C-DTLZ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DC-DTLZ.html">4. DC-DTLZ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DOC.html">5. DOC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MW.html">6. MW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LIR-CMOP.html">7. LIR-CMOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DAS-CMOP.html">8. DAS-CMOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">9. References</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CMOPs_DOCs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>1. CTP</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/summary/CTP.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ctp">
+<h1>1. CTP<a class="headerlink" href="#ctp" title="Permalink to this headline">¶</a></h1>
+<p>CTP was raised in 2001. The constraints make some part of the unconstrained Pareto-optimal region is infeasible. In this way the overall Pareto-optimal front will constitute with some unconstrained Pareto-optimal region and some constraint boundaries.</p>
+<p>CTP test problem set is only a double objective problem, which can not be extended to high dimensions. At the same time, its constraints setting is relatively simple and the range of objective values is small, which will cause most algorithms will not have too bad performance on this test problem set.</p>
+<p>Now, we give the details of the test problem set.</p>
+<div class="section" id="ctp1">
+<h2>1.1. CTP1<a class="headerlink" href="#ctp1" title="Permalink to this headline">¶</a></h2>
+<p>CTP1 is a continuous two-dimensional opitmization problem. The Pareto-optimal front makes up with some part of unconstrained Pareto-optimal region and some part of the constraint boundaries.</p>
+<div class="section" id="the-form-of-ctp1">
+<h3>1.1.1. the form of CTP1<a class="headerlink" href="#the-form-of-ctp1" title="Permalink to this headline">¶</a></h3>
+<p>the first objective value <span class="math notranslate nohighlight">\(f_1(x_I)\)</span> and the function <span class="math notranslate nohighlight">\(g(x_{II})\)</span> can be any multi-variable functions.</p>
+<p><em>the formula of the second objective value:</em></p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[f_2(x)=g(x_{II})e^{-f_1(x_I)/g(x_{II})}\]</div>
+</div></blockquote>
+<p><em>the formula of the constraint:</em></p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[C_j(x)=f_2(x) - a_je^{-b_jf_1(x_I)}\]</div>
+</div></blockquote>
+</div>
+<div class="section" id="procedure-for-calculating-a-j-and-b-j">
+<h3>1.1.2. procedure for calculating <span class="math notranslate nohighlight">\(a_j\)</span> and <span class="math notranslate nohighlight">\(b_j\)</span><a class="headerlink" href="#procedure-for-calculating-a-j-and-b-j" title="Permalink to this headline">¶</a></h3>
+<p><strong>STEP 1</strong>   Set j = 0, <span class="math notranslate nohighlight">\(a_j=b_j=1\)</span>; <span class="math notranslate nohighlight">\(\Delta=\frac{1}{J+1}\)</span> and <span class="math notranslate nohighlight">\(\alpha=\Delta\)</span></p>
+<p><strong>STEP 2</strong>   Calculate <span class="math notranslate nohighlight">\(\beta=a_{j}e^{-b_j\alpha}\)</span></p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[a_{j+1}=\frac{a_j+\beta}{2}\]</div>
+<div class="math notranslate nohighlight">
+\[b_{j+1}=-\frac{1}{\alpha}ln(\frac{\beta}{a_{j+1}})\]</div>
+</div></blockquote>
+<p>Increment <span class="math notranslate nohighlight">\(\alpha=\alpha+\Delta\)</span> and <span class="math notranslate nohighlight">\(j=j+1\)</span>.</p>
+<p><strong>STEP 3</strong>   if <span class="math notranslate nohighlight">\(j&lt;J\)</span>, go to Step 2. Otherwise, the process is complete.</p>
+<p>For two constriants (J=2), the above procedure finds the following parameter values:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[a_1 = 0.858, \ a_2 = 0.728, \ b_1 = 0.541, \ b_2 = 295\]</div>
+</div></blockquote>
+</div>
+<div class="section" id="code">
+<h3>1.1.3. Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">ctp1</span> <span class="p">(</span><span class="n">individual_real</span> <span class="o">*</span><span class="n">ind</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">double</span> <span class="n">m</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="o">*</span><span class="n">xreal</span><span class="p">,</span> <span class="o">*</span><span class="n">obj</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">f1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">f2</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">ind</span><span class="o">-&gt;</span><span class="n">obj</span><span class="p">;</span>
+    <span class="n">xreal</span> <span class="o">=</span> <span class="n">ind</span><span class="o">-&gt;</span><span class="n">xreal</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">number_objective</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">f1</span> <span class="o">+=</span> <span class="n">pow</span><span class="p">(</span><span class="n">xreal</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="mf">2.0</span><span class="p">);</span>
+        <span class="n">f2</span> <span class="o">+=</span> <span class="n">xreal</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">xreal</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="c1">//f1(x)</span>
+    <span class="n">g</span><span class="o">=</span><span class="mi">11</span><span class="o">+</span><span class="n">f1</span><span class="o">-</span><span class="mi">10</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">PI</span><span class="o">*</span><span class="n">f2</span><span class="p">);</span>
+    <span class="n">h</span><span class="o">=</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">g</span><span class="p">);</span>
+    <span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="o">*</span><span class="n">h</span><span class="p">;</span><span class="c1">//f2(x)</span>
+
+    <span class="c1">//the constraints:</span>
+    <span class="kt">int</span> <span class="n">j</span><span class="p">,</span><span class="n">J</span><span class="p">;</span>
+    <span class="n">J</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">a</span><span class="p">[</span><span class="n">J</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span><span class="n">b</span><span class="p">[</span><span class="n">J</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span><span class="n">C</span><span class="p">[</span><span class="n">J</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+    <span class="kt">double</span> <span class="n">alfa</span><span class="p">,</span><span class="n">beta</span><span class="p">,</span><span class="n">delta</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">a1</span><span class="p">,</span> <span class="n">b1</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span> <span class="n">b2</span><span class="p">,</span> <span class="n">C1</span><span class="p">,</span> <span class="n">C2</span><span class="p">;</span>
+    <span class="n">delta</span><span class="o">=</span><span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="n">J</span><span class="o">+</span><span class="mf">1.0</span><span class="p">);</span>
+    <span class="n">alfa</span><span class="o">=</span><span class="n">delta</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">J</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">j</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mf">1.0</span><span class="p">;</span>
+            <span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mf">1.0</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">beta</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">alfa</span><span class="p">);</span>
+        <span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="n">beta</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+        <span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=-</span><span class="mf">1.0</span><span class="o">*</span><span class="n">log</span><span class="p">(</span><span class="n">beta</span><span class="o">/</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="n">alfa</span><span class="p">;</span>
+        <span class="n">alfa</span><span class="o">=</span><span class="n">alfa</span><span class="o">+</span><span class="n">delta</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/*a1=0.858;</span>
+<span class="cm">      a2=0.728;</span>
+<span class="cm">      b1=0.541;</span>
+<span class="cm">      b2=0.295;</span>
+<span class="cm">    */</span>
+    <span class="n">ind</span><span class="o">-&gt;</span><span class="n">cv</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">J</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">C</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">C</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span><span class="o">||</span><span class="n">C</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="k">else</span>
+            <span class="n">m</span><span class="o">=</span><span class="n">C</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+        <span class="n">ind</span><span class="o">-&gt;</span><span class="n">cv</span> <span class="o">+=</span> <span class="n">m</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="objective-space-view">
+<h3>1.1.4. objective space view<a class="headerlink" href="#objective-space-view" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../_images/ctp1_new.png" src="../_images/ctp1_new.png" />
+</div>
+</div>
+</div>
+<div class="section" id="ctp2">
+<h2>1.2. CTP2<a class="headerlink" href="#ctp2" title="Permalink to this headline">¶</a></h2>
+<p>CTP2 is a discrete two-dimensional opitmization problem. The Pareto-optimal front makes up with some part of constrained Pareto-optimal region.</p>
+<div class="section" id="the-form-of-ctp2">
+<h3>1.2.1. the form of CTP2<a class="headerlink" href="#the-form-of-ctp2" title="Permalink to this headline">¶</a></h3>
+<p>the first objective value <span class="math notranslate nohighlight">\(f_1(x_I)\)</span> and the function <span class="math notranslate nohighlight">\(g(x_{II})\)</span> can be any multi-variable functions.</p>
+<p><em>the formula of the first objective value:</em></p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[f_1(x)=x_1\]</div>
+</div></blockquote>
+<p><em>the formula of the second objective value:</em></p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[f_2(x)=g(x)(1-f_1(x)/g(x))\]</div>
+</div></blockquote>
+<p><em>the formula of the constraint:</em></p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[C(x)\equiv cos(\theta)[f_2(x) - e] - sin(\theta)f_1(x) \geq a|sin\{{b*\pi[sin(\theta)(f_2(x) - e) + cos(\theta)f_1(x)]^c\}}|^d\]</div>
+</div></blockquote>
+</div>
+<div class="section" id="parameter-settings">
+<h3>1.2.2. parameter settings<a class="headerlink" href="#parameter-settings" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\theta = -0.2\pi, \ a = 0.2, \ b = 10, \ c = 1, \ d = 6, \ e = 1\]</div>
+</div></blockquote>
+</div>
+<div class="section" id="id1">
+<h3>1.2.3. Code<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">ctp2</span> <span class="p">(</span><span class="n">individual_real</span> <span class="o">*</span><span class="n">ind</span><span class="p">){</span>
+    <span class="kt">double</span> <span class="n">m</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="o">*</span><span class="n">xreal</span><span class="p">,</span> <span class="o">*</span><span class="n">obj</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">f</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">ind</span><span class="o">-&gt;</span><span class="n">obj</span><span class="p">;</span>
+    <span class="n">xreal</span> <span class="o">=</span> <span class="n">ind</span><span class="o">-&gt;</span><span class="n">xreal</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">number_objective</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">f</span> <span class="o">+=</span> <span class="n">xreal</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="n">g</span><span class="o">=</span><span class="mi">1</span><span class="o">+</span><span class="n">f</span><span class="p">;</span>
+    <span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">xreal</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>  <span class="c1">//f1(x)</span>
+    <span class="n">h</span><span class="o">=</span><span class="mi">1</span><span class="o">-</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">g</span><span class="p">;</span>
+    <span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="o">*</span><span class="n">h</span><span class="p">;</span>       <span class="c1">//f2(x)</span>
+
+    <span class="c1">//the constraint:</span>
+    <span class="kt">double</span> <span class="n">C</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">;</span>
+    <span class="n">theta</span><span class="o">=-</span><span class="mf">0.2</span><span class="o">*</span><span class="n">PI</span><span class="p">;</span>
+    <span class="n">a</span><span class="o">=</span><span class="mf">0.2</span><span class="p">;</span>
+    <span class="n">b</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
+    <span class="n">c</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+    <span class="n">d</span><span class="o">=</span><span class="mi">6</span><span class="p">;</span>
+    <span class="n">e</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+    <span class="n">C</span><span class="o">=</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">e</span><span class="p">)</span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">pow</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">PI</span><span class="o">*</span><span class="n">pow</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">e</span><span class="p">)</span><span class="o">+</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">c</span><span class="p">)),</span><span class="n">d</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">C</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">m</span><span class="o">=</span><span class="n">C</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">ind</span><span class="o">-&gt;</span><span class="n">cv</span><span class="o">=</span><span class="n">m</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>1.2.4. objective space view<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../_images/ctp2_new.png" src="../_images/ctp2_new.png" />
+</div>
+</div>
+</div>
+<div class="section" id="ctp3">
+<h2>1.3. CTP3<a class="headerlink" href="#ctp3" title="Permalink to this headline">¶</a></h2>
+<p>CTP3 is a discrete two-dimensional opitmization problem. The Pareto-optimal front makes up with some points of constrained Pareto-optimal region.</p>
+<p>The objectives’ formula and the constriant’s formula are the same as the form of CTP2. It just has a little change about the parameter settings of constraint.</p>
+<div class="section" id="id3">
+<h3>1.3.1. parameter settings<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\theta = -0.2\pi, \ a = 0.1, \ b = 10, \ c = 1, \ d = 0.5, \ e = 1\]</div>
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h3>1.3.2. Code<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">ctp3</span> <span class="p">(</span><span class="n">individual_real</span> <span class="o">*</span><span class="n">ind</span><span class="p">){</span>
+    <span class="kt">double</span> <span class="n">m</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="o">*</span><span class="n">xreal</span><span class="p">,</span> <span class="o">*</span><span class="n">obj</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">f</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">ind</span><span class="o">-&gt;</span><span class="n">obj</span><span class="p">;</span>
+    <span class="n">xreal</span> <span class="o">=</span> <span class="n">ind</span><span class="o">-&gt;</span><span class="n">xreal</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">number_objective</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">f</span> <span class="o">+=</span> <span class="n">xreal</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="n">g</span><span class="o">=</span><span class="mi">1</span><span class="o">+</span><span class="n">f</span><span class="p">;</span>
+    <span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">xreal</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>  <span class="c1">//f1(x)</span>
+    <span class="n">h</span><span class="o">=</span><span class="mi">1</span><span class="o">-</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">g</span><span class="p">;</span>
+    <span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="o">*</span><span class="n">h</span><span class="p">;</span>       <span class="c1">//f2(x)</span>
+
+    <span class="c1">//the constraint:</span>
+    <span class="kt">double</span> <span class="n">C</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">;</span>
+    <span class="n">theta</span><span class="o">=-</span><span class="mf">0.2</span><span class="o">*</span><span class="n">PI</span><span class="p">;</span>
+    <span class="n">a</span><span class="o">=</span><span class="mf">0.1</span><span class="p">;</span>
+    <span class="n">b</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
+    <span class="n">c</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+    <span class="n">d</span><span class="o">=</span><span class="mf">0.5</span><span class="p">;</span>
+    <span class="n">e</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+    <span class="n">C</span><span class="o">=</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">e</span><span class="p">)</span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">pow</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">PI</span><span class="o">*</span><span class="n">pow</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">e</span><span class="p">)</span><span class="o">+</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">c</span><span class="p">))),</span><span class="n">d</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">C</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">m</span><span class="o">=</span><span class="n">C</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">ind</span><span class="o">-&gt;</span><span class="n">cv</span><span class="o">=</span><span class="n">m</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>1.3.3. objective space view<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../_images/ctp3_new.png" src="../_images/ctp3_new.png" />
+</div>
+</div>
+</div>
+<div class="section" id="ctp4">
+<h2>1.4. CTP4<a class="headerlink" href="#ctp4" title="Permalink to this headline">¶</a></h2>
+<p>CTP4 is a discrete two-dimensional opitmization problem. The Pareto-optimal front makes up with some points of constrained Pareto-optimal region.</p>
+<p>The objectives’ formula and the constriant’s formula are the same as the form of CTP2. It just has a little change about the parameter settings of constraint.</p>
+<div class="section" id="id6">
+<h3>1.4.1. parameter settings<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\theta = -0.2\pi, \ a = 0.75, \ b = 10, \ c = 1, \ d = 0.5, \ e = 1\]</div>
+</div></blockquote>
+</div>
+<div class="section" id="id7">
+<h3>1.4.2. Code<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">ctp4</span> <span class="p">(</span><span class="n">individual_real</span> <span class="o">*</span><span class="n">ind</span><span class="p">){</span>
+    <span class="kt">double</span> <span class="n">m</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="o">*</span><span class="n">xreal</span><span class="p">,</span> <span class="o">*</span><span class="n">obj</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">f</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">ind</span><span class="o">-&gt;</span><span class="n">obj</span><span class="p">;</span>
+    <span class="n">xreal</span> <span class="o">=</span> <span class="n">ind</span><span class="o">-&gt;</span><span class="n">xreal</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">number_objective</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">f</span> <span class="o">+=</span> <span class="n">xreal</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="n">g</span><span class="o">=</span><span class="mi">1</span><span class="o">+</span><span class="n">f</span><span class="p">;</span>
+    <span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">xreal</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>  <span class="c1">//f1(x)</span>
+    <span class="n">h</span><span class="o">=</span><span class="mi">1</span><span class="o">-</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">g</span><span class="p">;</span>
+    <span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="o">*</span><span class="n">h</span><span class="p">;</span>       <span class="c1">//f2(x)</span>
+
+    <span class="c1">//the constraint:</span>
+    <span class="kt">double</span> <span class="n">C</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">;</span>
+    <span class="n">theta</span><span class="o">=-</span><span class="mf">0.2</span><span class="o">*</span><span class="n">PI</span><span class="p">;</span>
+    <span class="n">a</span><span class="o">=</span><span class="mf">0.75</span><span class="p">;</span>
+    <span class="n">b</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
+    <span class="n">c</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+    <span class="n">d</span><span class="o">=</span><span class="mf">0.5</span><span class="p">;</span>
+    <span class="n">e</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+    <span class="n">C</span><span class="o">=</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">e</span><span class="p">)</span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">pow</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">PI</span><span class="o">*</span><span class="n">pow</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">e</span><span class="p">)</span><span class="o">+</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">c</span><span class="p">))),</span><span class="n">d</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">C</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">m</span><span class="o">=</span><span class="n">C</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">ind</span><span class="o">-&gt;</span><span class="n">cv</span><span class="o">=</span><span class="n">m</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>1.4.3. objective space view<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../_images/ctp4_new.png" src="../_images/ctp4_new.png" />
+</div>
+</div>
+</div>
+<div class="section" id="ctp5">
+<h2>1.5. CTP5<a class="headerlink" href="#ctp5" title="Permalink to this headline">¶</a></h2>
+<p>CTP5 is a discrete two-dimensional opitmization problem. The Pareto-optimal front makes up with some points of constrained Pareto-optimal region.</p>
+<p>The objectives’ formula and the constriant’s formula are the same as the form of CTP2. It just has a little change about the parameter settings of constraint.</p>
+<div class="section" id="id9">
+<h3>1.5.1. parameter settings<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\theta = -0.2\pi, \ a = 0.1, \ b = 10, \ c = 2, \ d = 0.5, \ e = 1\]</div>
+</div></blockquote>
+</div>
+<div class="section" id="id10">
+<h3>1.5.2. Code<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">ctp5</span> <span class="p">(</span><span class="n">individual_real</span> <span class="o">*</span><span class="n">ind</span><span class="p">){</span>
+    <span class="kt">double</span> <span class="n">m</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="o">*</span><span class="n">xreal</span><span class="p">,</span> <span class="o">*</span><span class="n">obj</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">f</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">ind</span><span class="o">-&gt;</span><span class="n">obj</span><span class="p">;</span>
+    <span class="n">xreal</span> <span class="o">=</span> <span class="n">ind</span><span class="o">-&gt;</span><span class="n">xreal</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">number_objective</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">f</span> <span class="o">+=</span> <span class="n">xreal</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="n">g</span><span class="o">=</span><span class="mi">1</span><span class="o">+</span><span class="n">f</span><span class="p">;</span>
+    <span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">xreal</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>  <span class="c1">//f1(x)</span>
+    <span class="n">h</span><span class="o">=</span><span class="mi">1</span><span class="o">-</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">g</span><span class="p">;</span>
+    <span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="o">*</span><span class="n">h</span><span class="p">;</span>       <span class="c1">//f2(x)</span>
+
+    <span class="c1">//the constraint:</span>
+    <span class="kt">double</span> <span class="n">C</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">;</span>
+    <span class="n">theta</span><span class="o">=-</span><span class="mf">0.2</span><span class="o">*</span><span class="n">PI</span><span class="p">;</span>
+    <span class="n">a</span><span class="o">=</span><span class="mf">0.1</span><span class="p">;</span>
+    <span class="n">b</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
+    <span class="n">c</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+    <span class="n">d</span><span class="o">=</span><span class="mf">0.5</span><span class="p">;</span>
+    <span class="n">e</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+    <span class="n">C</span><span class="o">=</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">e</span><span class="p">)</span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">pow</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">PI</span><span class="o">*</span><span class="n">pow</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">e</span><span class="p">)</span><span class="o">+</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">c</span><span class="p">))),</span><span class="n">d</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">C</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">m</span><span class="o">=</span><span class="n">C</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">ind</span><span class="o">-&gt;</span><span class="n">cv</span><span class="o">=</span><span class="n">m</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h3>1.5.3. objective space view<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../_images/ctp5_new.png" src="../_images/ctp5_new.png" />
+</div>
+</div>
+</div>
+<div class="section" id="ctp6">
+<h2>1.6. CTP6<a class="headerlink" href="#ctp6" title="Permalink to this headline">¶</a></h2>
+<p>CTP6 is a discrete two-dimensional opitmization problem. The Pareto-optimal front makes up with some parts of constrained Pareto-optimal region.</p>
+<p>The objectives’ formula and the constriant’s formula are the same as the form of CTP2. It just has a little change about the parameter settings of constraint.</p>
+<div class="section" id="id12">
+<h3>1.6.1. parameter settings<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\theta = -0.1\pi, \ a = 40, \ b = 0.5, \ c = 1, \ d = 2, \ e = -2\]</div>
+</div></blockquote>
+</div>
+<div class="section" id="id13">
+<h3>1.6.2. Code<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">ctp6</span> <span class="p">(</span><span class="n">individual_real</span> <span class="o">*</span><span class="n">ind</span><span class="p">){</span>
+    <span class="kt">double</span> <span class="n">m</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="o">*</span><span class="n">xreal</span><span class="p">,</span> <span class="o">*</span><span class="n">obj</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">f</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">ind</span><span class="o">-&gt;</span><span class="n">obj</span><span class="p">;</span>
+    <span class="n">xreal</span> <span class="o">=</span> <span class="n">ind</span><span class="o">-&gt;</span><span class="n">xreal</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">number_objective</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">f</span> <span class="o">+=</span> <span class="n">xreal</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="n">g</span><span class="o">=</span><span class="mi">1</span><span class="o">+</span><span class="n">f</span><span class="o">*</span><span class="mi">5</span><span class="p">;</span>
+    <span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">xreal</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>  <span class="c1">//f1(x)</span>
+    <span class="n">h</span><span class="o">=</span><span class="mi">1</span><span class="o">-</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">g</span><span class="p">;</span>
+    <span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="o">*</span><span class="n">h</span><span class="p">;</span>       <span class="c1">//f2(x)</span>
+
+    <span class="c1">//the constraint:</span>
+    <span class="kt">double</span> <span class="n">C</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">;</span>
+    <span class="n">theta</span><span class="o">=-</span><span class="mf">0.1</span><span class="o">*</span><span class="n">PI</span><span class="p">;</span>
+    <span class="n">a</span><span class="o">=</span><span class="mi">40</span><span class="p">;</span>
+    <span class="n">b</span><span class="o">=</span><span class="mf">0.5</span><span class="p">;</span>
+    <span class="n">c</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+    <span class="n">d</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+    <span class="n">e</span><span class="o">=-</span><span class="mi">2</span><span class="p">;</span>
+    <span class="n">C</span><span class="o">=</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">e</span><span class="p">)</span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">pow</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">PI</span><span class="o">*</span><span class="n">pow</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">e</span><span class="p">)</span><span class="o">+</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">c</span><span class="p">))),</span><span class="n">d</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">C</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">m</span><span class="o">=</span><span class="n">C</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">ind</span><span class="o">-&gt;</span><span class="n">cv</span><span class="o">=</span><span class="n">m</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id14">
+<h3>1.6.3. objective space view<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../_images/ctp6_new.png" src="../_images/ctp6_new.png" />
+</div>
+</div>
+</div>
+<div class="section" id="ctp7">
+<h2>1.7. CTP7<a class="headerlink" href="#ctp7" title="Permalink to this headline">¶</a></h2>
+<p>CTP7 is a discrete two-dimensional opitmization problem. The Pareto-optimal front makes up with some parts of constrained Pareto-optimal region.</p>
+<p>The objectives’ formula and the constriant’s formula are the same as the form of CTP2. It just has a little change about the parameter settings of constraint.</p>
+<div class="section" id="id15">
+<h3>1.7.1. parameter settings<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\theta = -0.05\pi, \ a = 40, \ b = 5, \ c = 1, \ d = 6, \ e = 0\]</div>
+</div></blockquote>
+</div>
+<div class="section" id="id16">
+<h3>1.7.2. Code<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">ctp7</span> <span class="p">(</span><span class="n">individual_real</span> <span class="o">*</span><span class="n">ind</span><span class="p">){</span>
+    <span class="kt">double</span> <span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="o">*</span><span class="n">xreal</span><span class="p">,</span> <span class="o">*</span><span class="n">obj</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">f</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">ind</span><span class="o">-&gt;</span><span class="n">obj</span><span class="p">;</span>
+    <span class="n">xreal</span> <span class="o">=</span> <span class="n">ind</span><span class="o">-&gt;</span><span class="n">xreal</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">number_objective</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">f</span> <span class="o">+=</span> <span class="n">xreal</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="n">g</span><span class="o">=</span><span class="mi">1</span><span class="o">+</span><span class="n">f</span><span class="p">;</span>
+    <span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">xreal</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>  <span class="c1">//f1(x)</span>
+    <span class="n">h</span><span class="o">=</span><span class="mi">1</span><span class="o">-</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">g</span><span class="p">;</span>
+    <span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="o">*</span><span class="n">h</span><span class="p">;</span>       <span class="c1">//f2(x)</span>
+
+    <span class="c1">//the constraint:</span>
+    <span class="kt">double</span> <span class="n">C</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">;</span>
+    <span class="n">theta</span><span class="o">=-</span><span class="mf">0.05</span><span class="o">*</span><span class="n">PI</span><span class="p">;</span>
+    <span class="n">a</span><span class="o">=</span><span class="mi">40</span><span class="p">;</span>
+    <span class="n">b</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+    <span class="n">c</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+    <span class="n">d</span><span class="o">=</span><span class="mi">6</span><span class="p">;</span>
+    <span class="n">e</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="n">C</span><span class="o">=</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">e</span><span class="p">)</span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">pow</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">PI</span><span class="o">*</span><span class="n">pow</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">e</span><span class="p">)</span><span class="o">+</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">*</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">c</span><span class="p">))),</span><span class="n">d</span><span class="p">);</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">C</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">m1</span><span class="o">=</span><span class="n">C</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">m1</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">m2</span> <span class="o">=</span> <span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">m2</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">m2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">else</span>
+        <span class="n">m2</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">+</span> <span class="n">m2</span><span class="p">;</span>
+
+    <span class="n">ind</span><span class="o">-&gt;</span><span class="n">cv</span><span class="o">=</span><span class="n">m1</span> <span class="o">+</span> <span class="n">m2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id17">
+<h3>1.7.3. objective space view<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../_images/ctp7_new.png" src="../_images/ctp7_new.png" />
+</div>
+</div>
+</div>
+<div class="section" id="ctp8">
+<h2>1.8. CTP8<a class="headerlink" href="#ctp8" title="Permalink to this headline">¶</a></h2>
+<p>CTP8 is a discrete two-dimensional opitmization problem. The Pareto-optimal front makes up with some parts of constrained Pareto-optimal region.</p>
+<p>The objectives’ formula and the constriant’s formula are the same as the form of CTP2. It just has a little change about the parameter settings of constraints. Meanwhile, it has two constraints.</p>
+<div class="section" id="id18">
+<h3>1.8.1. parameter settings<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\begin{split}\theta1 = 0.1\pi, \ a1 = 40, \ b1 = 0.5, \ c1 = 1, \ d1 = 2, \ e1 = -2\\
+\theta2 = -0.05\pi, \ a2 = 40, \ b2 = 2, \ c2 = 1, \ d2 = 6, \ e2 = 0\end{split}\]</div>
+</div></blockquote>
+</div>
+<div class="section" id="id19">
+<h3>1.8.2. Code<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">ctp8</span> <span class="p">(</span><span class="n">individual_real</span> <span class="o">*</span><span class="n">ind</span><span class="p">){</span>
+    <span class="kt">double</span> <span class="n">m</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="o">*</span><span class="n">xreal</span><span class="p">,</span> <span class="o">*</span><span class="n">obj</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">f</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">ind</span><span class="o">-&gt;</span><span class="n">obj</span><span class="p">;</span>
+    <span class="n">xreal</span> <span class="o">=</span> <span class="n">ind</span><span class="o">-&gt;</span><span class="n">xreal</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">number_objective</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">f</span> <span class="o">+=</span> <span class="n">xreal</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="n">g</span><span class="o">=</span><span class="mi">1</span><span class="o">+</span><span class="n">f</span><span class="o">*</span><span class="mi">5</span><span class="p">;</span>
+    <span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">xreal</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>  <span class="c1">//f1(x)</span>
+    <span class="n">h</span><span class="o">=</span><span class="mi">1</span><span class="o">-</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">g</span><span class="p">;</span>
+    <span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="o">*</span><span class="n">h</span><span class="p">;</span>       <span class="c1">//f2(x)</span>
+
+    <span class="c1">//the constraints:</span>
+    <span class="kt">double</span> <span class="n">C1</span><span class="p">,</span> <span class="n">theta1</span><span class="p">,</span> <span class="n">a1</span><span class="p">,</span><span class="n">b1</span><span class="p">,</span><span class="n">c1</span><span class="p">,</span><span class="n">d1</span><span class="p">,</span><span class="n">e1</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">C2</span><span class="p">,</span> <span class="n">theta2</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span><span class="n">b2</span><span class="p">,</span><span class="n">c2</span><span class="p">,</span><span class="n">d2</span><span class="p">,</span><span class="n">e2</span><span class="p">;</span>
+
+    <span class="n">theta1</span><span class="o">=</span><span class="mf">0.1</span><span class="o">*</span><span class="n">PI</span><span class="p">;</span>
+    <span class="n">a1</span><span class="o">=</span><span class="mi">40</span><span class="p">;</span>
+    <span class="n">b1</span><span class="o">=</span><span class="mf">0.5</span><span class="p">;</span>
+    <span class="n">c1</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+    <span class="n">d1</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+    <span class="n">e1</span><span class="o">=-</span><span class="mi">2</span><span class="p">;</span>
+    <span class="n">C1</span><span class="o">=</span><span class="n">cos</span><span class="p">(</span><span class="n">theta1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">e1</span><span class="p">)</span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">theta1</span><span class="p">)</span><span class="o">*</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">a1</span><span class="o">*</span><span class="n">pow</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">b1</span><span class="o">*</span><span class="n">PI</span><span class="o">*</span><span class="n">pow</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">theta1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">e1</span><span class="p">)</span><span class="o">+</span><span class="n">cos</span><span class="p">(</span><span class="n">theta1</span><span class="p">)</span><span class="o">*</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">c1</span><span class="p">))),</span><span class="n">d1</span><span class="p">);</span>
+
+    <span class="n">theta2</span><span class="o">=-</span><span class="mf">0.05</span><span class="o">*</span><span class="n">PI</span><span class="p">;</span>
+    <span class="n">a2</span><span class="o">=</span><span class="mi">40</span><span class="p">;</span>
+    <span class="n">b2</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+    <span class="n">c2</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+    <span class="n">d2</span><span class="o">=</span><span class="mi">6</span><span class="p">;</span>
+    <span class="n">e2</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="n">C2</span><span class="o">=</span><span class="n">cos</span><span class="p">(</span><span class="n">theta2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">e2</span><span class="p">)</span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">theta2</span><span class="p">)</span><span class="o">*</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">a2</span><span class="o">*</span><span class="n">pow</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">b2</span><span class="o">*</span><span class="n">PI</span><span class="o">*</span><span class="n">pow</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">theta2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">e2</span><span class="p">)</span><span class="o">+</span><span class="n">cos</span><span class="p">(</span><span class="n">theta2</span><span class="p">)</span><span class="o">*</span><span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">c2</span><span class="p">))),</span><span class="n">d2</span><span class="p">);</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">C1</span><span class="o">&gt;</span><span class="mi">0</span> <span class="o">||</span> <span class="n">C1</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">m</span><span class="o">=</span><span class="n">C1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">C2</span><span class="o">&gt;</span><span class="mi">0</span> <span class="o">||</span> <span class="n">C2</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">ind</span><span class="o">-&gt;</span><span class="n">cv</span> <span class="o">=</span> <span class="n">m</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">ind</span><span class="o">&gt;</span><span class="n">cv</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="n">C2</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id20">
+<h3>1.8.3. objective space view<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../_images/ctp8_new.png" src="../_images/ctp8_new.png" />
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="CF.html" class="btn btn-neutral float-right" title="2. CF" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, tennie1996
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
